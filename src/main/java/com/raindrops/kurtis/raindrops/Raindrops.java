@@ -2,7 +2,9 @@ package com.raindrops.kurtis.raindrops;
 
 public class Raindrops {
     public static String raindrops(int num) {
-        if (num % 15 == 0) {
+        if (num % 21 == 0) {
+            return "PlingPlong";
+        } else if (num % 15 == 0) {
             return "PlingPlang";
         } else if (num % 7 == 0) {
             return "Plong";
