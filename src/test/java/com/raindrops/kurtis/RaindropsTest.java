@@ -31,7 +31,7 @@ public class RaindropsTest {
     @ParameterizedTest(name = "testing with {0}")
     @DisplayName("should return 'Plang'")
     @CsvSource({"5", "10", "20", "25", "40", "50"})
-    void shouldReturnPling(int num) {
-        Assertions.assertEquals(Raindrops.raindrops(num), "Pling");
+    void shouldReturnPlang(int num) {
+        Assertions.assertEquals(Raindrops.raindrops(num), "Plang");
     }
 }
