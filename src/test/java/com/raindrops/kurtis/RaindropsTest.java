@@ -6,6 +6,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 /**
  * Unit tests for Raindrops app
  */
@@ -20,7 +22,7 @@ public class RaindropsTest {
     @DisplayName("should return 'Pling'")
     @CsvSource({"3", "6", "9", "12", "18", "27"})
     void shouldReturnPling(int num) {
-        Assertions.assertEquals(Raindrops.raindrops(num), "Pling");
+        assertEquals(Raindrops.raindrops(num), "Pling");
     }
 
     /**
@@ -32,7 +34,7 @@ public class RaindropsTest {
     @DisplayName("should return 'Plang'")
     @CsvSource({"5", "10", "20", "25", "40", "50"})
     void shouldReturnPlang(int num) {
-        Assertions.assertEquals(Raindrops.raindrops(num), "Plang");
+        assertEquals(Raindrops.raindrops(num), "Plang");
     }
 
     /**
@@ -44,7 +46,7 @@ public class RaindropsTest {
     @DisplayName("should return 'Plong'")
     @CsvSource({"7", "14", "28", "49", "56", "77"})
     void shouldReturnPlong(int num) {
-        Assertions.assertEquals(Raindrops.raindrops(num), "Plong");
+        assertEquals(Raindrops.raindrops(num), "Plong");
     }
 
     /**
@@ -52,7 +54,12 @@ public class RaindropsTest {
      * <p>{@code num} is divisible by both 3 and 5
      * @param num the number to be tested
      */
-    void shouldReturnPlingPlang(int num){}
+    @ParameterizedTest(name = "testing with {0}")
+    @DisplayName("should return 'PlingPlang'")
+    @CsvSource({"15", "30", "45", "60", "75", "90"})
+    void shouldReturnPlingPlang(int num){
+        assertEquals(Raindrops.raindrops(num), "PlingPlang");
+    }
 
     /**
      * <em>Tests</em> that {@code 'PlingPlong'} is returned when
