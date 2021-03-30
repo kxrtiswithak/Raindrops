@@ -1,9 +1,12 @@
 package com.raindrops.kurtis.start;
 
-import com.raindrops.kurtis.util.Printer;
+import com.raindrops.kurtis.view.Prompter;
 
+/**
+ * Kickstarts the prompter
+ */
 public class Starter {
     public static void start() {
-        Printer.printMessage("message");
+        Prompter.promptUser();
     }
 }
