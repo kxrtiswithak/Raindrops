@@ -78,7 +78,12 @@ public class RaindropsTest {
      * <p>{@code num} is divisible by both 5 and 7
      * @param num the number to be tested
      */
-    void shouldReturnPlangPlong(int num){}
+    @ParameterizedTest(name = "testing with {0}")
+    @DisplayName("should return 'PlangPlong'")
+    @CsvSource({"35", "70", "140", "175", "245", "280"})
+    void shouldReturnPlangPlong(int num){
+        assertEquals(Raindrops.raindrops(num), "PlangPlong");
+    }
 
     /**
      * <em>Tests</em> that {@code 'PlingPlangPlong'} is returned when
