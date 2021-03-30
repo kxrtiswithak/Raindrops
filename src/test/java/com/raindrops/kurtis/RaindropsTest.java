@@ -102,7 +102,12 @@ public class RaindropsTest {
      * <p>{@code num} is divisible by neither 3, 5 or 7
      * @param num the number to be tested
      */
-    void shouldReturnDigits(int num){}
+    @ParameterizedTest(name = "testing with {0}")
+    @DisplayName("should return 'num'")
+    @CsvSource({"1", "2", "11", "34", "92", "631"})
+    void shouldReturnDigits(int num){
+        assertEquals(Raindrops.raindrops(num), String.valueOf(num));
+    }
 
 
 }
