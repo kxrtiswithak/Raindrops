@@ -1,5 +1,9 @@
 package com.raindrops.kurtis.raindrops;
 
+/**
+ * Essentially controller aspect of program
+ * <p>contains business logic</p>
+ */
 public class Raindrops {
 
     /**
