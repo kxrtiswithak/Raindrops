@@ -1,7 +1,7 @@
 package com.raindrops.kurtis.start;
 
 /**
- * Hello world!
+ * Method to run the program
  *
  */
 public class App {
