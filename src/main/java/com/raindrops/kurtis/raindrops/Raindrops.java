@@ -17,6 +17,7 @@ public class Raindrops {
         } else if (num % 5 == 0) {
             return "Plang";
         }
-        return null;
+
+        return String.valueOf(num);
     }
 }
