@@ -4,6 +4,8 @@ public class Raindrops {
     public static String raindrops(int num) {
         if (num % 105 == 0) {
             return "PlingPlangPlong";
+        } else if (num % 35 == 0) {
+            return "PlangPlong";
         } else if (num % 21 == 0) {
             return "PlingPlong";
         } else if (num % 15 == 0) {
