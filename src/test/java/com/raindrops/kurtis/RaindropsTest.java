@@ -1,7 +1,6 @@
 package com.raindrops.kurtis;
 
 import com.raindrops.kurtis.raindrops.Raindrops;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -108,6 +107,4 @@ public class RaindropsTest {
     void shouldReturnDigits(int num){
         assertEquals(Raindrops.raindrops(num), String.valueOf(num));
     }
-
-
 }
