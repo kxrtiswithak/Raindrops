@@ -25,7 +25,7 @@ public class RaindropsTest {
 
     /**
      * <em>Tests</em> that {@code 'Plang'} is returned when
-     * <p>{@code num} is divisible 5 alone
+     * <p>{@code num} is divisible by 5 alone
      * @param num the number to be tested
      */
     @ParameterizedTest(name = "testing with {0}")
@@ -34,4 +34,53 @@ public class RaindropsTest {
     void shouldReturnPlang(int num) {
         Assertions.assertEquals(Raindrops.raindrops(num), "Plang");
     }
+
+    /**
+     * <em>Tests</em> that {@code 'Plong'} is returned when
+     * <p>{@code num} is divisible by 7 alone
+     * @param num the number to be tested
+     */
+    @ParameterizedTest(name = "testing with {0}")
+    @DisplayName("should return 'Plong'")
+    @CsvSource({"7", "14", "28", "49", "56", "77"})
+    void shouldReturnPlong(int num) {
+        Assertions.assertEquals(Raindrops.raindrops(num), "Plong");
+    }
+
+    /**
+     * <em>Tests</em> that {@code 'PlingPlang'} is returned when
+     * <p>{@code num} is divisible by both 3 and 5
+     * @param num the number to be tested
+     */
+    void shouldReturnPlingPlang(int num){}
+
+    /**
+     * <em>Tests</em> that {@code 'PlingPlong'} is returned when
+     * <p>{@code num} is divisible by both 3 and 7
+     * @param num the number to be tested
+     */
+    void shouldReturnPlingPlong(int num){}
+
+    /**
+     * <em>Tests</em> that {@code 'PlangPlong'} is returned when
+     * <p>{@code num} is divisible by both 5 and 7
+     * @param num the number to be tested
+     */
+    void shouldReturnPlangPlong(int num){}
+
+    /**
+     * <em>Tests</em> that {@code 'PlingPlangPlong'} is returned when
+     * <p>{@code num} is divisible by 3, 5 and 7
+     * @param num the number to be tested
+     */
+    void shouldReturnPlingPlangPlong(int num){}
+
+    /**
+     * <em>Tests</em> that {@code num}'s digits are returned when
+     * <p>{@code num} is divisible by neither 3, 5 or 7
+     * @param num the number to be tested
+     */
+    void shouldReturnDigits(int num){}
+
+
 }
